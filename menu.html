@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gourmet Menu</title>
+<link rel="stylesheet" href="menu.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Gourmet Delights</h1>
+    <p>Exclusive Menu for Food Lovers</p>
+  </div>
+</section>
+
+<!-- BANNERS -->
+<section class="banner">
+  <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1200&q=80" alt="Chef Specials">
+  <div class="banner-text">
+    <h2>Chef's Specials</h2>
+    <p>Curated by our Master Chefs for a unique dining experience</p>
+  </div>
+</section>
+
+<section class="banner banner-alt">
+  <img src="https://images.unsplash.com/photo-1604908177520-4d2c9d16a4b1?auto=format&fit=crop&w=1200&q=80" alt="Dessert Corner">
+  <div class="banner-text">
+    <h2>Dessert Corner</h2>
+    <p>Sweet delights to satisfy your cravings</p>
+  </div>
+</section>
+
+<section class="banner banner-drinks">
+  <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1200&q=80" alt="Beverage Selection">
+  <div class="banner-text">
+    <h2>Beverage Selection</h2>
+    <p>Refreshing drinks to complement your gourmet experience</p>
+  </div>
+</section>
+
+<!-- MENÚ -->
+<section class="menu">
+  <div class="dish" data-img="img/5.JPG">
+    <img src="img/5.JPG" alt="Lamb Chops">
+    <h3>Lamb Chops</h3>
+    <p>$45</p>
+  </div>
+  <div class="dish" data-img="img/6.JPG">
+    <img src="img/6.JPG" alt="Chocolate Mousse">
+    <h3>Chocolate Mousse</h3>
+    <p>$14</p>
+  </div>
+  <div class="dish" data-img="img/7.JPG">
+    <img src="img/7.JPG" alt="Caesar Salad">
+    <h3>Caesar Salad</h3>
+    <p>$12</p>
+  </div>
+  <div class="dish" data-img="img/8.JPG">
+    <img src="img/8.JPG" alt="French Onion Soup">
+    <h3>French Onion Soup</h3>
+    <p>$16</p>
+  </div>
+  <div class="dish" data-img="img/9.JPG">
+    <img src="img/9.JPG" alt="Pan-Seared Scallops">
+    <h3>Pan-Seared Scallops</h3>
+    <p>$35</p>
+  </div>
+</section>
+
+<!-- MODAL PLATO -->
+<div class="modal" id="productModal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="" alt="Dish">
+    <h3>Dish Name</h3>
+    <p>Description</p>
+    <span class="price">$0</span>
+    <button id="buyBtn">Order Now</button>
+  </div>
+</div>
+
+<!-- MODAL COMPRA -->
+<div class="modal" id="purchaseModal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Customize Your Dish</h3>
+    <form id="purchaseForm">
+      <label>Customer Name<input type="text" id="customerName" required placeholder="Your name"></label>
+      <label>Extra Ingredients<input type="text" id="extras" placeholder="Cheese, Bacon, etc."></label>
+      <label>Quantity<input type="number" id="quantity" min="1" value="1"></label>
+      <button type="submit">Confirm Purchase</button>
+      <div class="subtotal">Subtotal: $0</div>
+    </form>
+  </div>
+</div>
+
+<!-- MODAL TICKET -->
+<div class="modal" id="ticketModal">
+  <div class="modal-content ticket">
+    <span class="close">&times;</span>
+    <h3>Your Order Ticket</h3>
+    <div id="ticketContent"></div>
+    <div id="qrcodeWrapper"><div id="qrcode"></div></div>
+  </div>
+</div>
+
+<button class="back-btn">Back</button>
+
+<script src="menu.js"></script>
+</body>
+</html>
